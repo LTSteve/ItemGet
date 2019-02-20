@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Item Get!</title>
+
+  <link rel="stylesheet" href="app/css/style.css">
+</head>
+<body>
+
+  <div class="head-bar">
+    Item Get!
+  </div>
+
+  <div data-bind="with: home">
+
+    <div class="page centered">
+      <button type="button" class="btn" data-bind="click: openDrawer.bind($element), text: configText">Config</button>
+      <div class="chunk drawer minimized animated">
+        <ul class="unstyled settings">
+          <li>
+            <span class="quart">
+              <span class="div">Subjects</span>
+              <span class="div small gen1">(<span data-bind="text: genSubject"></span>)</span>
+            </span>
+            <span class="quart-3">
+              <ul class="unstyled inline">
+                <li>
+                  <label for="subjectWeapons">
+                    Weapons
+                    <input id="subjectWeapons" type="checkbox" data-bind="checked: settings.subjectWeapons" />
+                  </label>
+                </li>
+                <li>
+                  <label for="subjectTrinkets">
+                    Trinkets
+                    <input id="subjectTrinkets" type="checkbox" data-bind="checked: settings.subjectTrinkets" />
+                  </label>
+                </li>
+                <li>
+                  <label for="subjectArmors">
+                    Armors
+                    <input id="subjectArmors" type="checkbox" data-bind="checked: settings.subjectArmors" />
+                  </label>
+                </li>
+                <li>
+                  <label for="subjectWeird">
+                    Weird
+                    <input id="subjectWeird" type="checkbox" data-bind="checked: settings.subjectWeird" />
+                  </label>
+                </li>
+                <li>
+                  <label for="subjectLarge">
+                    Large
+                    <input id="subjectLarge" type="checkbox" data-bind="checked: settings.subjectLarge" />
+                  </label>
+                </li>
+              </ul>
+            </span>
+          </li>
+          <li>
+            <span class="quart">
+              <span class="div">Actions</span>
+              <span class="div small gen2">(<span data-bind="text: genAction"></span>)</span>
+            </span>
+            <span class="quart-3">
+              <ul class="unstyled inline">
+                <li>
+                  <label for="actionDamage">
+                    Damage
+                    <input id="actionDamage" type="checkbox" data-bind="checked: settings.actionDamage" />
+                  </label>
+                </li>
+                <li>
+                  <label for="actionElementalDamage">
+                    Elemental Damage
+                    <input id="actionElementalDamage" type="checkbox" data-bind="checked: settings.actionElementalDamage" />
+                  </label>
+                </li>
+                <li>
+                  <label for="actionMagicEffect">
+                    Effect
+                    <input id="actionMagicEffect" type="checkbox" data-bind="checked: settings.actionMagicEffect" />
+                  </label>
+                </li>
+                <li>
+                  <label for="actionNonCombat">
+                    Non-Combat
+                    <input id="actionNonCombat" type="checkbox" data-bind="checked: settings.actionNonCombat" />
+                  </label>
+                </li>
+              </ul>
+            </span>
+          </li>
+          <li>
+            <span class="quart">
+              <span class="div">Objects</span>
+              <span class="div small gen3">(<span data-bind="text: genObject"></span>)</span>
+            </span>
+            <span class="quart-3">
+              <ul class="unstyled inline">
+                <li>
+                  <label for="objectRaces">
+                    Races
+                    <input id="objectRaces" type="checkbox" data-bind="checked: settings.objectRaces" />
+                  </label>
+                </li>
+                <li>
+                  <label for="objectObjects">
+                    Objects
+                    <input id="objectObjects" type="checkbox" data-bind="checked: settings.objectObjects" />
+                  </label>
+                </li>
+                <li>
+                  <label for="objectWeird">
+                    Weird
+                    <input id="objectWeird" type="checkbox" data-bind="checked: settings.objectWeird" />
+                  </label>
+                </li>
+              </ul>
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="chunk">
+        <p class="bigtext">
+          You find a(n)
+          <span class="gen1" data-bind="text: genSubject"></span>
+          enchanted with the power of
+          <span class="gen2" data-bind="text: genAction"></span>
+          <span class="gen3" data-bind="text: genObject"></span>
+        </p>
+      </div>
+      <button type="button" class="btn" data-bind="click: regen">Re-Roll</button>
+    </div>
+  </div>
+
+  <script data-main="app/common" src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" type="text/javascript"></script>
+  <script>
+    require(['common'],function(){
+      require(['knockout', 'page/home'],function(ko, home){
+
+        ko.applyBindings({home: home});
+      });
+    });
+  </script>
+</body>
+</html>

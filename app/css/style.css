@@ -1,0 +1,182 @@
+*{
+  font-size:20px;
+}
+
+label {
+  user-select: none;
+  cursor:pointer;
+}
+
+body{
+  margin:0px;
+  padding:0px;
+}
+
+@media (min-width: 992px)
+{
+  .page {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 768px)
+{
+  .page {
+    max-width: 720px;
+  }
+}
+@media (min-width: 576px)
+{
+  .page {
+    max-width: 540px;
+  }
+}
+.page {
+    width: calc(100% - 30px);
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.head-bar{
+  width: 100%;
+  text-align:center;
+  font-size:30px;
+  padding-top:10px;
+  padding-bottom:20px;
+  margin-bottom:5px;
+  border-bottom: 1px solid grey;
+  background-color:black;
+  color:white;
+  font-weight:bold;
+}
+
+.btn{
+  background: white;
+  border:2px solid black;
+  border-radius:5px;
+  box-shadow: 2px 2px darkgrey;
+  display:inline-block;
+  cursor: pointer;
+  user-select: none;
+  -webkit-highlight:none;
+  outline:none;
+}
+
+.btn:hover {
+  background: black;
+  color: white;
+}
+
+.btn:focus{
+  border-color: grey;
+}
+
+.btn:active{
+  color:black;
+}
+
+.centered{
+  text-align: center;
+}
+
+.gen1,.gen2,.gen3{
+  font-weight:bold;
+  font-size:24px;
+  padding-left:5px;
+  padding-right:5px;
+  display:inline-block;
+}
+
+.small.gen1, .small.gen2, .small.gen3 {
+    font-weight: normal;
+    font-size: 14px;
+    padding: 0px;
+}
+
+.gen1{
+  color: darkred;
+}
+
+.gen2{
+  color: darkgreen;
+}
+
+.gen3{
+  color: darkblue;
+}
+
+.chunk {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  height:auto;
+  max-height: 300px;
+}
+
+.drawer {
+  overflow-y: hidden;
+  border-top:0px;
+  border-bottom:0px;
+  background-color: #eee;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.drawer.minimized{
+  max-height:0px;
+  margin-top:0px;
+  margin-bottom:0px;
+  padding-top:0px;
+  padding-bottom:0px;
+  border-top:0px;
+  border-bottom:0px;
+  background-color: #eee0;
+}
+
+.animated {
+  transition: all .5s ease-in-out;
+}
+
+ul.unstyled, ul.unstyled > li{
+  list-style: none;
+  padding:0px;
+  margin: 0px;
+  display:inline-block;
+  width:100%;
+}
+
+ul.unstyled.inline > li {
+  width:auto;
+}
+
+.settings{
+  text-align:left;
+}
+
+ul.unstyled.settings > li{
+  padding-bottom:8px;
+  margin-top:8px;
+  border-bottom: 1px solid grey;
+}
+
+.settings ul.inline > li {
+  border: 1px solid darkgrey;
+  border-radius: 2px;
+  margin: 4px;
+  padding:2px;
+}
+
+.quart {
+  display:inline-block;
+  width: 24%;
+}
+
+.quart-3 {
+  display:inline-block;
+  width: 74%;
+}
